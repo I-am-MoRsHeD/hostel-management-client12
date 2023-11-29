@@ -40,7 +40,7 @@ const ManageUser = () => {
                 <title>Cooking God | Manage Users</title>
             </Helmet>
             <SectionTitle heading={"All Users"}></SectionTitle>
-            <div className="overflow-x-auto">
+            <div className="overflow-x-auto shadow-amber-200 shadow-xl max-w-4xl mx-auto">
                 <table className="table w-11/12 mx-auto">
                     {/* head */}
                     <thead>

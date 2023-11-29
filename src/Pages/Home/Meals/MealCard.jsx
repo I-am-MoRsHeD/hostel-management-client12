@@ -9,9 +9,9 @@ const MealCard = ({ meal }) => {
     const { title, image, rating, price, _id } = meal;
 
     return (
-        <div className="card bg-slate-100 shadow-xl">
+        <div className="card bg-black shadow-slate-50 shadow-lg text-white">
             <figure><img src={image} alt="Shoes" /></figure>
-            <p className='absolute right-0 font-bold bg-red-200 rounded-full top-4 mr-2 px-2'>{price}</p>
+            <p className='absolute right-0 font-bold bg-red-400 rounded-full top-4 mr-2 px-2'>{price}</p>
             <div className="card-body">
                 <h2 className="card-title font-bold">{title}</h2>
                 <Rating

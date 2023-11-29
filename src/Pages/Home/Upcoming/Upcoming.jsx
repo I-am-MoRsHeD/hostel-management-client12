@@ -48,7 +48,7 @@ const Upcoming = () => {
                 <SectionTitle heading={"Upcoming Meals"}></SectionTitle>
                 <div className='flex flex-col  gap-9'>
                     {
-                        upcoming?.map(item => <div key={item?._id} className="card card-side bg-slate-100 shadow-xl">
+                        upcoming?.map(item => <div key={item?._id} className="card card-side bg-black text-white shadow-white shadow-xl">
                             <div className=' '>
                                 <img className='w-full' src={item?.image} alt="Meal" />
                             </div>

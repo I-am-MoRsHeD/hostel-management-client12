@@ -67,7 +67,7 @@ const Dashboard = () => {
 
             </div>
             {/* display contents */}
-            <div className='flex-1 bg-slate-200'>
+            <div className='flex-1 bg-black'>
                 <Outlet></Outlet>
             </div>
         </div >

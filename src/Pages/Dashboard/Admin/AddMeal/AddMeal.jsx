@@ -57,7 +57,7 @@ const AddMeal = () => {
 
 
     return (
-        <div>
+        <div className='shadow-amber-200 shadow-xl max-w-4xl mx-auto'>
              <Helmet>
                 <title>Cooking God | Add Meal</title>
             </Helmet>

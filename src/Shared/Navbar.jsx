@@ -11,9 +11,9 @@ import Swal from 'sweetalert2';
 const Navbar = () => {
     const { user, logOut } = useAuth();
     const navlinks = <>
-        <li><NavLink to='/'>Home</NavLink></li>
-        <li><NavLink to='/meals'>Meals</NavLink></li>
-        <li><NavLink to='/upcoming'>Upcoming Meals</NavLink></li>
+        <li className='font-bold'><NavLink to='/'>Home</NavLink></li>
+        <li className='font-bold'><NavLink to='/meals'>Meals</NavLink></li>
+        <li className='font-bold'><NavLink to='/upcoming'>Upcoming Meals</NavLink></li>
     </>
     const handleLogout = () => {
         logOut()

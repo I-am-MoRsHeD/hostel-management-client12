@@ -47,7 +47,7 @@ const Checkout = () => {
                 </div>
                 <div className='grid grid-cols-2 gap-8'>
                     {
-                        filteredItem?.map(item => <div key={item._id} className="card  bg-slate-100 shadow-xl">
+                        filteredItem?.map(item => <div key={item._id} className="card  bg-black text-white shadow-white shadow-lg">
                             <figure><img src={item?.image} alt="Shoes" /></figure>
                             <div className="card-body">
                                 <h2 className="card-title font-bold">{item?.title}</h2>

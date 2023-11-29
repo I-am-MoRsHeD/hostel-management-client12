@@ -38,7 +38,7 @@ const AdminProfile = () => {
 
 
     return (
-        <div className='shadow-xl  max-w-2xl mx-auto'>
+        <div className='shadow-amber-200 shadow-xl max-w-2xl mx-auto'>
              <Helmet>
                 <title>Cooking God | Admin Profile</title>
             </Helmet>
