@@ -32,7 +32,7 @@ const AllReviews = () => {
         setMatchedMeals(allReview)
     }, [meals, reviews])
 
-    const sort = matchedMeals.sort((a, b) => b.likes.length > a.likes.length ? 1 : -1 || b.reviews > a.reviews ? 1 : -1);
+    const sort = matchedMeals.sort((a, b) => b?.likes?.length > a?.likes?.length ? 1 : -1 || b?.reviews > a?.reviews ? 1 : -1);
 
     const handleDelete = meal => {
         Swal.fire({
@@ -70,7 +70,7 @@ const AllReviews = () => {
              <Helmet>
                 <title>Cooking God | All Reviews</title>
             </Helmet>
-            <div className="overflow-x-auto shadow-amber-200 shadow-xl max-w-4xl mx-auto">
+            <div className="overflow-x-auto shadow-amber-200 shadow-xl max-w-4xl mx-auto text-white">
                 <SectionTitle heading={'All Reviews'}></SectionTitle>
                 <table className="table w-11/12 mx-auto">
                     {/* head */}

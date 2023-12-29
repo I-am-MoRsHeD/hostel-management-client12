@@ -14,7 +14,7 @@ const MealsPage = () => {
     const handleSearch = () => {
 
         const searchInput = searchRef.current.value;
-        const filterBySearchBar = meals.filter(meal => meal.title === searchInput);
+        const filterBySearchBar = meals.filter(meal => meal.title.toLowerCase() === searchInput.toLowerCase());
         {
             filterBySearchBar ? setFilteredMeals(filterBySearchBar) : <div className='text-red-600'>There is no data found</div>
         }
@@ -72,8 +72,8 @@ const MealsPage = () => {
                 </div>
                 {/* filtered tabs */}
                 <div className='flex justify-between mb-10'>
-                    {/* tab 1 */}
-                    <details className="dropdown">
+                    {/* by category */}
+                    <div className="dropdown dropdown-hover">
                         <summary className="m-1 btn btn-neutral hover:border-blue-600 border-2">Filter by Category</summary>
                         <ul className="py-4 space-y-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-24">
                             <button onClick={() => handleMeals('All')} className='btn btn-xs btn-neutral hover:border-y-indigo-700'>All</button>
@@ -81,10 +81,10 @@ const MealsPage = () => {
                             <button onClick={() => handleMeals('Lunch')} className='btn btn-xs btn-neutral hover:border-y-indigo-700'>Lunch</button>
                             <button onClick={() => handleMeals('Dinner')} className='btn btn-xs btn-neutral hover:border-y-indigo-700'>Dinner</button>
                         </ul>
-                    </details>
-                    {/* tab 2 */}
-                    <details className="dropdown">
-                        <summary className="m-1 btn btn-neutral hover:border-blue-600 border-2">Filter by Category</summary>
+                    </div>
+                    {/* by price */}
+                    <div className="dropdown dropdown-hover">
+                        <summary className="m-1 btn btn-neutral hover:border-blue-600 border-2">Filter by Price</summary>
                         <ul className="py-4 space-y-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-24">
                             <button onClick={() => handleByPrice('All')} className='btn btn-xs btn-neutral hover:border-y-indigo-700'>All</button>
                             <button onClick={() => handleByPrice(300)} className='btn btn-xs btn-neutral hover:border-y-indigo-700'>100 - 300</button>
@@ -92,7 +92,7 @@ const MealsPage = () => {
                             <button onClick={() => handleByPrice(900)} className='btn btn-xs btn-neutral hover:border-y-indigo-700'>601 - 900</button>
                             <button onClick={() => handleByPrice(901)} className='btn btn-xs btn-neutral hover:border-y-indigo-700'>901 - above</button>
                         </ul>
-                    </details>
+                    </div>
                 </div>
                 {/* All meals card */}
                 <div className='grid md:grid-cols-3 grid-cols-1 gap-6'>

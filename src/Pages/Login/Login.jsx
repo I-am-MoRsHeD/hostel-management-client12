@@ -37,8 +37,13 @@ const Login = () => {
                     animate={{ x: 0 }}
                     transition={{ duration: 1.6, delay: 0.3, type: 'spring', stiffness: 50 }}
                     onSubmit={handleSubmit(onSubmit)} className="card-body bg-sky-600 h-full w-[450px] shadow-2xl">
-                    <h2 className="text-3xl text-center mb-10 font-bold">Join Us</h2>
-                    <div className="form-control mb-6 border-b-2 text-white">
+                    <h2 className="text-3xl text-center mb-1 font-bold">Join Us</h2>
+                    <div className='mb-7'>
+                        <h2 className="text-2xl font-bold">Admin Demo --</h2>
+                        <h2 className="text-2xl">Email: akkas@gmail.com</h2>
+                        <h2 className="text-2xl">password: 123456A@a</h2>
+                    </div>
+                    <div className="form-control mb-2 border-b-2 text-white">
                         <input
                             type="email"
                             name="email"
@@ -49,7 +54,7 @@ const Login = () => {
                     {errors.email?.type == "required" && (
                         <span className='text-red-600 -mt-5'>Email is required</span>
                     )}
-                    <div className="form-control mb-6 border-b-2 text-white">
+                    <div className="form-control mb-2 border-b-2 text-white">
                         <input
                             type="password"
                             name="password"
@@ -74,10 +79,10 @@ const Login = () => {
                     {errors.password?.type == "pattern" && (
                         <span className='text-red-600 -mt-5'>Password must have atleast one uppercase,one lowercase and one special character</span>
                     )}
-                    <div className="form-control mt-6 text-white">
+                    <div className="form-control mt-2 text-white">
                         <button className="btn btn-warning hover:btn-ghost">Join</button>
                     </div>
-                    <div className='mt-2'>
+                    <div className='mt-1'>
                         <p className='text-xl'>Do not have an account? Please <Link className='font-semibold text-yellow-500 underline' to='/register'>Register</Link></p>
                     </div>
                     <SocialLogin></SocialLogin>

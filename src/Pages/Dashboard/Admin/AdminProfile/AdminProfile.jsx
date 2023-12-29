@@ -44,7 +44,7 @@ const AdminProfile = () => {
             </Helmet>
             <Container>
                 <SectionTitle heading={"Admin Profile"}></SectionTitle>
-                <div className='flex gap-9 py-5 max-w-lg mx-auto'>
+                <div className='flex gap-9 py-5 max-w-lg mx-auto text-white'>
                     <div>
                         <img className='w-52 rounded-xl' src={currentUser?.image}alt="" />
                     </div>

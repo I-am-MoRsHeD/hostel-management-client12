@@ -39,7 +39,7 @@ const SocialLogin = () => {
     }
 
     return (
-        <div className='w-44 mt-8 mx-auto'>
+        <div className='w-44 mt-2 mx-auto'>
             <p className='text-center font-bold mb-5 text-2xl'>Or</p>
             <div className='flex lg:justify-center mt-2 rounded-full py-1 px-2 border-2 bg-orange-400 text-white '>
                 <button onClick={handleGoogle} className='font-semibold p-2 flex items-center'>
