@@ -32,7 +32,7 @@ const Navbar = () => {
                     initial={{ y: -170 }}
                     animate={{ y: -10 }}
                     transition={{ delay: 0.5, type: 'spring', stiffness: 100 }}
-                    className="navbar fixed max-w-5xl z-10 backdrop-brightness-150 text-sky-600">
+                    className="navbar fixed max-w-5xl pt-3 z-10 backdrop-brightness-150 text-sky-600">
                     <div className="navbar-start">
                         <div className="dropdown">
                             <label tabIndex={0} className="btn btn-ghost lg:hidden">

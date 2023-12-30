@@ -7,6 +7,7 @@ import MealTab from './MealTab';
 import MealCard from './MealCard';
 import { Link } from 'react-router-dom';
 import { AwesomeButton } from "react-awesome-button";
+import Container from '../../../Shared/Container';
 
 const Services = () => {
     const [meals] = useMeals();
@@ -18,46 +19,48 @@ const Services = () => {
 
 
     return (
-        <div className='my-24 space-y-10'>
-            <h2 className="text-4xl font-bold text-center">Our All Meals</h2>
-            <Tabs>
-                <div className='text-center mb-10'>
-                    <TabList>
-                        <Tab>All Meals</Tab>
-                        <Tab>Breakfast</Tab>
-                        <Tab>Lunch</Tab>
-                        <Tab>Dinner</Tab>
-                    </TabList>
-                </div>
-
-                <TabPanel>
-                    <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6'>
-                        {
-                            meals?.slice(0, 9)?.map(meal => <MealCard
-                                meal={meal}
-                                key={meal._id}></MealCard>)
-                        }
+        <Container>
+            <div className='my-24 mx-5 md:mx-5 lg:mx-0 space-y-10'>
+                <h2 className="text-4xl font-bold text-center">Our All Meals</h2>
+                <Tabs>
+                    <div className='text-center mb-10'>
+                        <TabList>
+                            <Tab>All Meals</Tab>
+                            <Tab>Breakfast</Tab>
+                            <Tab>Lunch</Tab>
+                            <Tab>Dinner</Tab>
+                        </TabList>
                     </div>
-                </TabPanel>
-                <TabPanel>
-                    <MealTab item={breakfast}></MealTab>
-                </TabPanel>
-                <TabPanel>
-                    <MealTab item={lunch}></MealTab>
-                </TabPanel>
-                <TabPanel>
-                    <MealTab item={dinner}></MealTab>
-                </TabPanel>
-            </Tabs>
-            <div className={meals?.length === 9 ? 'hidden' : 'w-20 mx-auto'}>
 
-                <Link to='/meals'>
-                <AwesomeButton type="github"  >See All</AwesomeButton>
-                    
-                </Link>
+                    <TabPanel>
+                        <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6'>
+                            {
+                                meals?.slice(0, 9)?.map(meal => <MealCard
+                                    meal={meal}
+                                    key={meal._id}></MealCard>)
+                            }
+                        </div>
+                    </TabPanel>
+                    <TabPanel>
+                        <MealTab item={breakfast}></MealTab>
+                    </TabPanel>
+                    <TabPanel>
+                        <MealTab item={lunch}></MealTab>
+                    </TabPanel>
+                    <TabPanel>
+                        <MealTab item={dinner}></MealTab>
+                    </TabPanel>
+                </Tabs>
+                <div className={meals?.length === 9 ? 'hidden' : 'w-20 mx-auto'}>
 
+                    <Link to='/meals'>
+                        <AwesomeButton type="github"  >See All</AwesomeButton>
+
+                    </Link>
+
+                </div>
             </div>
-        </div>
+        </Container>
     );
 };
 

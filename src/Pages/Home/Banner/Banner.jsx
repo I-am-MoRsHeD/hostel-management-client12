@@ -1,14 +1,16 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
-import Container from '../../../Shared/Container';
 import { motion } from 'framer-motion';
 import { AwesomeButton } from 'react-awesome-button';
+import Container from '../../../Shared/Container';
 
 const Banner = () => {
     return (
         <div
-            style={{ height: ["100vh"] }}
-            className="bg-[url('https://i.ibb.co/Jv5xMRH/bg-1.jpg')] bg-cover overflow-x-hidden">
+            style={{
+                height: ["100vh"]
+            }}
+            className="bg-[url('https://i.ibb.co/Jv5xMRH/bg-1.jpg')] overflow-x-hidden">
 
             <Container>
                 <div className='flex flex-row md:h-[100vh] h-[100vh] lg:h-[100vh] justify-center items-center '>
@@ -60,7 +62,7 @@ const Banner = () => {
                             }}
                             className="lg:w-3/4 w-full lg:px-10 md:px-10 px-2 flex flex-row lg:gap-5 gap-1">
 
-                            <input type="text" placeholder="Type here" className="input input-bordered input-primary w-full" />
+                            <input type="text" placeholder="Search here" className="input input-bordered input-primary w-full" />
                             <AwesomeButton type='primary'>Search</AwesomeButton>
                         </motion.div>
                     </div>
@@ -73,7 +75,6 @@ const Banner = () => {
                     </motion.div>
                 </div>
             </Container>
-
         </div>
     );
 };

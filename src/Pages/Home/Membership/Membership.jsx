@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import SectionTitle from '../../../Compounts/SectionTitle/SectionTitle';
 import usePackages from '../../../hooks/usePackages';
 import { AwesomeButton } from 'react-awesome-button';
+import Container from '../../../Shared/Container';
 
 const Membership = () => {
     const [packages] = usePackages();
@@ -18,45 +19,47 @@ const Membership = () => {
 
 
     return (
-        <div className='lg:my-10 my-3'>
-            <SectionTitle heading={"Membership Packages"}></SectionTitle>
-            <h2 className='text-base text-center -mt-9 mb-4 text-neutral-400'>To get reward or discount or specific facilities,buy a package...</h2>
-            <div className='grid lg:grid-cols-3 grid-cols-1 gap-6 pt-8'>
-                {/* silver package */}
-                <div className="card card-compact lg:h-[40vh] h-[60vh] bg-[#48c6d2] shadow-white shadow-lg">
-                    <div className="card-body">
-                        <h2 className="text-2xl mt-3 font-bold text-center">Silver Package</h2>
-                        <div className="card-actions mt-20 justify-end">
-                            <Link to={`/checkout/${items[0]}`}>
-                            <AwesomeButton  type="secondary">Details <FaArrowRightLong className='pl-1'/></AwesomeButton>
-                            </Link>
+        <Container>
+            <div className='lg:my-10 my-3 mx-5 md:mx-5 lg:mx-0'>
+                <SectionTitle heading={"Membership Packages"}></SectionTitle>
+                <h2 className='text-base text-center -mt-9 mb-4 text-neutral-400'>To get reward or discount or specific facilities,buy a package...</h2>
+                <div className='grid lg:grid-cols-3 grid-cols-1 gap-6 pt-8'>
+                    {/* silver package */}
+                    <div className="card card-compact lg:h-[40vh] h-[60vh] bg-[#48c6d2] shadow-white shadow-lg">
+                        <div className="card-body">
+                            <h2 className="text-2xl mt-3 font-bold text-center">Silver Package</h2>
+                            <div className="card-actions mt-20 justify-end">
+                                <Link to={`/checkout/${items[0]}`}>
+                                    <AwesomeButton type="secondary">Details <FaArrowRightLong className='pl-1' /></AwesomeButton>
+                                </Link>
+                            </div>
                         </div>
                     </div>
-                </div>
-                {/* Platinum package */}
-                <div className="card card-compact lg:h-[40vh] h-[60vh] bg-[#48c6d2] shadow-white shadow-lg">
-                    <div className="card-body">
-                        <h2 className="text-2xl mt-3 font-bold text-center">Platinum Package</h2>
-                        <div className="card-actions mt-20 justify-end">
-                            <Link to={`/checkout/${items[1]}`}>
-                            <AwesomeButton  type="secondary">Details <FaArrowRightLong className='pl-1'/></AwesomeButton>
-                            </Link>
+                    {/* Platinum package */}
+                    <div className="card card-compact lg:h-[40vh] h-[60vh] bg-[#48c6d2] shadow-white shadow-lg">
+                        <div className="card-body">
+                            <h2 className="text-2xl mt-3 font-bold text-center">Platinum Package</h2>
+                            <div className="card-actions mt-20 justify-end">
+                                <Link to={`/checkout/${items[1]}`}>
+                                    <AwesomeButton type="secondary">Details <FaArrowRightLong className='pl-1' /></AwesomeButton>
+                                </Link>
+                            </div>
                         </div>
                     </div>
-                </div>
-                {/* Gold package */}
-                <div className="card card-compact lg:h-[40vh] h-[60vh] bg-[#48c6d2] shadow-white shadow-lg">
-                    <div className="card-body">
-                        <h2 className="text-2xl mt-3 font-bold text-center">Gold Package</h2>
-                        <div className="card-actions mt-20 justify-end">
-                            <Link to={`/checkout/${items[2]}`}>
-                            <AwesomeButton  type="secondary">Details <FaArrowRightLong className='pl-1'/></AwesomeButton>
-                            </Link>
+                    {/* Gold package */}
+                    <div className="card card-compact lg:h-[40vh] h-[60vh] bg-[#48c6d2] shadow-white shadow-lg">
+                        <div className="card-body">
+                            <h2 className="text-2xl mt-3 font-bold text-center">Gold Package</h2>
+                            <div className="card-actions mt-20 justify-end">
+                                <Link to={`/checkout/${items[2]}`}>
+                                    <AwesomeButton type="secondary">Details <FaArrowRightLong className='pl-1' /></AwesomeButton>
+                                </Link>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </Container>
     );
 };
 
