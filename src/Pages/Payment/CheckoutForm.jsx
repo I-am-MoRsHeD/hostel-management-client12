@@ -20,6 +20,7 @@ const CheckoutForm = () => {
         axiosSecure.post('/create-payment-intent', { price: items })
             .then(res => {
                 setClientSecret(res.data.clientSecret)
+                console.log(res)
             })
 
     }, [axiosSecure, items])

@@ -59,7 +59,7 @@ const UpcomingMeals = () => {
                                     {ind + 1}
                                 </th>
                                 <td>
-                                    {item?.title}
+                                {item?.title?.length > 10 ? item?.title?.slice(0,9)+'....' : item?.title}
                                 </td>
                                 <td>
                                     {item?.likes?.length}

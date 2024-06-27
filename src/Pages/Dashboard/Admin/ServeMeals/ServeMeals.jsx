@@ -73,7 +73,7 @@ const ServeMeals = () => {
                                     {ind + 1}
                                 </th>
                                 <th>
-                                    {meal?.title}
+                                {meal?.title?.length > 10 ? meal?.title?.slice(0,9)+'....' : meal?.title}
                                 </th>
                                 <td>
                                     {meal?.email}

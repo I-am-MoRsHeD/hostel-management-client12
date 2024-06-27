@@ -91,7 +91,7 @@ const AllReviews = () => {
                                     {ind + 1}
                                 </th>
                                 <td>
-                                    <h2 className="font-bold">{meal?.findMeals?.title}</h2>
+                                    <h2 className="font-bold">{meal?.findMeals?.title?.length > 10 ? meal?.findMeals?.title?.slice(0,9)+'....' : meal?.findMeals?.title}</h2>
                                 </td>
                                 <td>
                                     {meal?.findMeals?.likes?.length}

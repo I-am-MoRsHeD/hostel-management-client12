@@ -88,10 +88,10 @@ const MyProfile = () => {
                 {/* Modal */}
                 <div>
                     {/* modal */}
-                    <div className='w-11/12 mb-5 pb-5 flex justify-end'>
+                    <div className='lg:w-11/12 mb-5 pb-5 flex justify-end'>
                         <button className="btn" onClick={() => document.getElementById('my_modal_1').showModal()}>Edit</button>
                     </div>
-                    <dialog id="my_modal_1" className="modal ">
+                    <dialog id="my_modal_1" className="modal w-full ">
                         <div className="modal-box bg-slate-200">
 
                             <form className='text-white' onSubmit={handleSubmit(onSubmit)}>
@@ -167,13 +167,13 @@ const MyProfile = () => {
                 </div>
                 {/* about me info */}
                 <div>
-                    <div className="flex justify-center items-center shadow-xl pb-10">
-                        <figure><img className='w-80' src={about?.image} alt="Profile" /></figure>
+                    <div className="lg:flex justify-center items-center shadow-xl pb-10">
+                        <figure><img className='lg:w-80' src={about?.image} alt="Profile" /></figure>
                         <div className="divider divider-accent lg:divider-horizontal "></div>
-                        <div className="w-1/2 ml-5">
+                        <div className="lg:w-1/2 lg:ml-5">
                             <h2 className="mb-8 font-bold font-mono">{about?.title}</h2>
                             <p className='w-full text-base'>{about?.about}.</p>
-                            <p className='mt-14 ml-40 bg-[#48c6d2] rounded-lg p-1'>Contact: <span className='font-semibold'>{about?.email}</span></p>
+                            <p className='mt-14 lg:ml-40 bg-[#48c6d2] rounded-lg p-1'>Contact: <span className='font-semibold'>{about?.email}</span></p>
                         </div>
                     </div>
                 </div>

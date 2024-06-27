@@ -10,7 +10,7 @@ const Banner = () => {
             style={{
                 height: ["100vh"]
             }}
-            className="bg-[url('https://i.ibb.co/Jv5xMRH/bg-1.jpg')] overflow-x-hidden">
+            className="bg-[url('https://i.ibb.co/Jv5xMRH/bg-1.jpg')] overflow-x-hidden bg-cover">
 
             <Container>
                 <div className='flex flex-row md:h-[100vh] h-[100vh] lg:h-[100vh] justify-center items-center '>

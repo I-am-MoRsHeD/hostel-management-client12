@@ -38,10 +38,10 @@ const AllMeals = () => {
         });
     }
 
-    
+
     return (
         <div>
-             <Helmet>
+            <Helmet>
                 <title>Cooking God | All Meals</title>
             </Helmet>
             <SectionTitle heading={"All Meals Here"}></SectionTitle>
@@ -60,14 +60,14 @@ const AllMeals = () => {
                             <th>Action</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody className='text-center'>
                         {
                             meals?.map((meal, index) => <tr key={meal?._id}>
                                 <th>
                                     {index + 1}
                                 </th>
-                                <td>
-                                    <div className="font-bold">{meal?.title}</div>
+                                <td className=''>
+                                    {meal?.title?.length > 10 ? meal?.title?.slice(0,9)+'....' : meal?.title}
                                 </td>
                                 <td>
                                     {meal?.likes?.length}
@@ -80,7 +80,7 @@ const AllMeals = () => {
                                         Delete
                                     </button>
                                 </td>
-                                <th className='flex gap-2'>
+                                <th className='flex text-center gap-2'>
                                     <button className="btn btn-accent btn-sm">Update</button>
                                     <Link to={`/meals/${meal?._id}`}>
                                         <button className="btn btn-warning btn-sm">View Details</button>

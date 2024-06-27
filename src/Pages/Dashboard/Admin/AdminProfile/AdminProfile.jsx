@@ -50,11 +50,11 @@ const AdminProfile = () => {
                     </div>
                     <div className='flex flex-col items-center gap-4 justify-center'>
                         <div className='flex gap-6 justify-center items-center'>
-                            <h2 className="text-2xl ">Name: <span className='font-bold'>{currentUser?.name}</span></h2>
+                            <h2 className="lg:text-2xl text-xl flex gap-3">Name: <span className='font-bold'>{currentUser?.name}</span></h2>
                             <img className='w-10' src={currentUser?.badge?.props?.src} alt="" />
                         </div>
-                        <h4 className="text-xl">Email: <span className='font-bold'>{currentUser?.email}</span></h4>
-                        <h2 className="text-2xl">Items Added : <span className='font-bold'>{items.length}</span></h2>
+                        <h4 className="text-xl">Email: <span className='font-bold lg:text-xl text-lg'>{currentUser?.email}</span></h4>
+                        <h2 className="lg:text-2xl text-xl">Items Added : <span className='font-bold'>{items.length}</span></h2>
                     </div>
                 </div>
             </Container>

@@ -7,7 +7,7 @@ const Footer = () => {
     return (
         <div className='lg:mt-44 mt-10'>
             <Container>
-                <div className='bg-sky-700 lg:h-64 md:h-44 h-36 flex flex-col lg:flex-row absolute w-10/12 md:w-[700px] lg:w-[1000px] lg:ml-3 ml-9 rounded-b-lg'>
+                <div className='bg-sky-700 lg:h-64 md:h-44 h-36 flex flex-col lg:flex-row absolute w-11/12 md:w-[700px] lg:w-[1000px] lg:ml-3 ml-4 rounded-b-lg'>
                     <div className='border-t-2 lg:w-1/4 w-2/4 ml-3 lg:ml-10  mx-auto'>
                         <h5 className="lg:text-lg text-base border px-2 rounded-xl mt-1 w-3/4 text-center ">Invented:</h5>
                         <h2 className="lg:text-4xl text-xl lg:ml-14 ml-3 md:ml-32 mt-2 text-white font-bold">From 2012</h2>
@@ -20,7 +20,7 @@ const Footer = () => {
             </Container>
             <footer className="flex flex-col lg:pt-72 md:pt-44 pt-32 h-[100vh] lg:p-10 md:px-10 px-2 bg-slate-700 text-base-content rounded">
 
-                <div className='flex justify-between items-center my-8 mx-3 md:mx-16 lg:mx-20'>
+                <div className='flex justify-between items-center gap-5 my-8 mx-3 md:mx-16 lg:mx-20'>
                     <div>
                         <h2 className="lg:text-2xl text-base font-bold border-b-2">Direct Contact :</h2>
                         <div className='space-y-2 lg:mt-8 mt-2'>

@@ -57,11 +57,12 @@ const Register = () => {
 
     return (
         <Container>
-            <div className='flex lg:flex-row md:flex-col justify-evenly items-center lg:h-[100vh] h-full my-10'>
+            <div className='flex lg:flex-row md:flex-col justify-evenly items-center lg:h-[100vh] h-auto my-10'>
                 <motion.div
                     initial={{ x: '-70vw' }}
                     animate={{ x: 0 }}
                     transition={{ duration: 1.6, delay: 0.3, type: 'spring', stiffness: 50 }}
+                    className='hidden md:block'
                 >
                     <img className='w-[500px] h-[600px]' src="https://i.ibb.co/KNYr3Bn/login-image.jpg" alt="" />
                 </motion.div>
@@ -69,7 +70,7 @@ const Register = () => {
                     initial={{ x: '70vw' }}
                     animate={{ x: 0 }}
                     transition={{ duration: 1.6, delay: 0.3, type: 'spring', stiffness: 50 }}
-                    onSubmit={handleSubmit(onSubmit)} className="card-body  bg-sky-600 h-ful w-[450px] shadow-2xl">
+                    onSubmit={handleSubmit(onSubmit)} className="card-body  bg-sky-600 h-ful lg:w-[450px] shadow-2xl">
                     <h2 className="text-3xl text-center mb-10 font-bold">Register</h2>
                     <div className="form-control mb-6 border-b-2 text-white">
                         <input
