@@ -25,7 +25,7 @@ const Dashboard = () => {
                     <div className='lg:hidden'>
                         <button
                             className="p-1 mr-5 mb-4 -ml-1 rounded-md focus:outline-none focus:shadow-outline-purple"
-                            
+
                             aria-label="Menu"
                         >
                             {isSideMenuOpen ? (
@@ -43,36 +43,36 @@ const Dashboard = () => {
                             isAdmin ? <>
                                 {/* Admin panel */}
                                 <li>
-                                    <NavLink defaultChecked to='adminProfile'>Admin Profile</NavLink>
+                                    <NavLink onClick={() => {setIsSideMenuOpen(!isSideMenuOpen)}} to='adminProfile'>Admin Profile</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to='manageUsers'>Manage Users</NavLink>
+                                    <NavLink onClick={() => {setIsSideMenuOpen(!isSideMenuOpen)}} to='manageUsers'>Manage Users</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to='addMeal'>Add Meal</NavLink>
+                                    <NavLink onClick={() => {setIsSideMenuOpen(!isSideMenuOpen)}}  to='addMeal'>Add Meal</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to='allMeals'>All Meals</NavLink>
+                                    <NavLink onClick={() => {setIsSideMenuOpen(!isSideMenuOpen)}}  to='allMeals'>All Meals</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to='allReviews'>All Reviews</NavLink>
+                                    <NavLink onClick={() => {setIsSideMenuOpen(!isSideMenuOpen)}}  to='allReviews'>All Reviews</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to='serveMeals'>Serve Meals</NavLink>
+                                    <NavLink onClick={() => {setIsSideMenuOpen(!isSideMenuOpen)}}  to='serveMeals'>Serve Meals</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to='upcomingMeals'>Upcoming Meals</NavLink>
+                                    <NavLink onClick={() => {setIsSideMenuOpen(!isSideMenuOpen)}}  to='upcomingMeals'>Upcoming Meals</NavLink>
                                 </li>
                             </> : <>
                                 {/* User panel */}
                                 <li>
-                                    <NavLink defaultChecked to='myProfile'>My Profile</NavLink>
+                                    <NavLink onClick={() => {setIsSideMenuOpen(!isSideMenuOpen)}}  to='myProfile'>My Profile</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to='requestedMeals'>Requested Meals</NavLink>
+                                    <NavLink onClick={() => {setIsSideMenuOpen(!isSideMenuOpen)}}  to='requestedMeals'>Requested Meals</NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to='myReviews'>My Reviews</NavLink>
+                                    <NavLink onClick={() => {setIsSideMenuOpen(!isSideMenuOpen)}}  to='myReviews'>My Reviews</NavLink>
                                 </li>
                             </>}
                         {/* divider */}
