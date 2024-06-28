@@ -46,13 +46,13 @@ const Upcoming = () => {
             </Helmet>
             <Container>
                 <SectionTitle heading={"Upcoming Meals"}></SectionTitle>
-                <div className='flex flex-col  gap-9'>
+                <div className='flex flex-col gap-9'>
                     {
-                        upcoming?.map(item => <div key={item?._id} className="card card-side bg-black text-white shadow-white shadow-xl">
-                            <div className=' '>
-                                <img className='w-full' src={item?.image} alt="Meal" />
+                        upcoming?.map(item => <div key={item?._id} className="flex flex-col lg:flex-row mx-2 lg:mx-0 rounded-xl bg-black text-white shadow-white shadow-xl">
+                            <div className=' flex-1'>
+                                <img className='w-full rounded-l-lg' src={item?.image} alt="Meal" />
                             </div>
-                            <div className="card-body w-[550px]">
+                            <div className="card-body flex-1">
                                 <h2 className="card-title font-bold">{item?.title}</h2>
                                 <p className='text-base'>{item?.desc}</p>
                                 <div>

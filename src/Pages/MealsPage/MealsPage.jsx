@@ -66,7 +66,7 @@ const MealsPage = () => {
             <div className='pt-16'>
                 <SectionTitle heading={'All Meals Here'}></SectionTitle>
                 {/* search bar */}
-                <div className='w-2/4 mx-auto mb-20 flex flex-row'>
+                <div className='lg:w-2/4 w-[90%] mx-auto mb-20 flex flex-row'>
                     <input ref={searchRef} type="text" placeholder="Type here" className="input input-bordered text-white input-primary w-full" />
                     <button onClick={handleSearch} className="btn btn-accent">Search</button>
                 </div>
@@ -95,7 +95,7 @@ const MealsPage = () => {
                     </div>
                 </div>
                 {/* All meals card */}
-                <div className='grid md:grid-cols-3 grid-cols-1 gap-6'>
+                <div className='grid md:grid-cols-3 grid-cols-1 mx-2 lg:mx-0 gap-6'>
                     {
                         filteredMeals?.map(meal => <MealCard
                             meal={meal}

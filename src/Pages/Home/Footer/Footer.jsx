@@ -20,7 +20,7 @@ const Footer = () => {
             </Container>
             <footer className="flex flex-col lg:pt-72 md:pt-44 pt-32 h-[100vh] lg:p-10 md:px-10 px-2 bg-slate-700 text-base-content rounded">
 
-                <div className='flex justify-between items-center gap-5 my-8 mx-3 md:mx-16 lg:mx-20'>
+                <div className='flex justify-between lg:items-center gap-5 my-8 mx-3 md:mx-16 lg:mx-20'>
                     <div>
                         <h2 className="lg:text-2xl text-base font-bold border-b-2">Direct Contact :</h2>
                         <div className='space-y-2 lg:mt-8 mt-2'>
@@ -29,7 +29,7 @@ const Footer = () => {
                         </div>
                     </div>
                     <nav>
-                        <h2 className="lg:text-3xl text-xl font-bold lg:mb-8 mb-2 border-b-2 ">Our Socials</h2>
+                        <h2 className="lg:text-3xl text-lg -mt-1 lg:-mt-0 font-bold lg:mb-8 mb-2 border-b-2 ">Our Socials</h2>
                         <div className="grid grid-flow-col gap-4">
                             <FaFacebook></FaFacebook>
                             <FaInstagram></FaInstagram>

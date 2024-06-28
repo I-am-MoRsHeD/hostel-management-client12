@@ -7,6 +7,7 @@ import { GoMoon } from 'react-icons/go';
 import { motion } from 'framer-motion';
 import useAuth from '../hooks/useAuth';
 import Swal from 'sweetalert2';
+import { IoIosCloseCircle } from "react-icons/io";
 import { FaBarsStaggered, FaXmark } from 'react-icons/fa6';
 
 const Navbar = () => {
@@ -17,9 +18,23 @@ const Navbar = () => {
     };
 
     const navlinks = <>
-        <li className='font-bold'><NavLink to='/'>Home</NavLink></li>
-        <li className='font-bold'><NavLink to='/meals'>Meals</NavLink></li>
-        <li className='font-bold'><NavLink to='/upcoming'>Upcoming Meals</NavLink></li>
+        <li>
+            <button
+                onClick={() => setIsSideMenuOpen(false)}
+                className=" text-white text-2xl float-end font-semibold lg:hidden"
+            >
+                <IoIosCloseCircle />
+            </button>
+        </li>
+        <li className='font-bold'>
+            <NavLink onClick={() => setIsSideMenuOpen(!isSideMenuOpen)} to='/'>Home</NavLink>
+        </li>
+        <li className='font-bold'>
+            <NavLink onClick={() => setIsSideMenuOpen(!isSideMenuOpen)} to='/meals'>Meals</NavLink>
+        </li>
+        <li className='font-bold'>
+            <NavLink onClick={() => setIsSideMenuOpen(!isSideMenuOpen)} to='/upcoming'>Upcoming Meals</NavLink>
+        </li>
     </>
     const handleLogout = () => {
         logOut()
@@ -28,7 +43,7 @@ const Navbar = () => {
                     title: "Logged Out!",
                     text: "Successfully logged out..!",
                     icon: "success"
-                  });
+                });
             })
     }
     return (
@@ -40,19 +55,22 @@ const Navbar = () => {
                     transition={{ delay: 0.5, type: 'spring', stiffness: 100 }}
                     className="navbar fixed max-w-5xl pt-3 z-10 backdrop-contrast-200 text-sky-600">
                     <div className="navbar-start">
-                        <div className="dropdown">
-                        <button
-                            className="mr-5 mb-4 rounded-md focus:outline-none focus:shadow-outline-purple"
-                            onClick={toggleSideMenu}
-                            aria-label="Menu"
-                        >
-                            {isSideMenuOpen ? (
-                                <FaXmark className="w-4 h-4" />
-                            ) : (
-                                <FaBarsStaggered className="w-4 h-4" />
-                            )}
-                        </button>
-                            <ul tabIndex={0} className={`menu duration-300  ease-in-out  ${isSideMenuOpen ? "translate-x-0" : "-translate-x-full"} menu-sm dropdown-content  z-[1] shadow bg-base-100 rounded-box w-40`}>
+                        <div className="lg:hidden">
+                            <button
+                                className="mr-5 mb-4 rounded-md focus:outline-none focus:shadow-outline-purple"
+                                onClick={toggleSideMenu}
+                                aria-label="Menu"
+                            >
+                                {isSideMenuOpen ? (
+                                    <FaXmark className="w-4 h-4" />
+                                ) : (
+                                    <FaBarsStaggered className="w-4 h-4" />
+                                )}
+                            </button>
+                            <ul tabIndex={0} className={`text-sky-700 lg:hidden absolute md:-top-4 top-2 left-0 right-0 w-[100vw] transition-all duration-500 flex flex-col items-center text-center gap-5 hero-overlay ${isSideMenuOpen
+                                ? "opacity-100 visible h-screen"
+                                : "opacity-0 invisible h-0"
+                                } bg-opacity-90 bg-black py-10 shadow`}>
                                 {navlinks}
                             </ul>
                         </div>

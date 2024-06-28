@@ -191,14 +191,14 @@ const MealDetails = () => {
             <Helmet>
                 <title>Cooking God | Meals Details</title>
             </Helmet>
-            <div>
+            <div className=''>
                 {
-                    mealDetails?.map(detail => <div key={detail._id} className="card card-compact shadow-xl">
+                    mealDetails?.map(detail => <div key={detail._id} className="card card-compact shadow-xl pt-20">
                         <figure><img src={detail?.image} alt={detail?.title} /></figure>
 
                         {/* details body */}
-                        <div className="px-10 py-20 flex justify-between">
-                            <div className='w-1/3 space-y-5'>
+                        <div className="px-10 py-20 flex flex-col lg:flex-row justify-between">
+                            <div className='lg:w-1/3 space-y-5'>
                                 <h2>Posted By : <span className="text-2xl font-bold">{detail?.distributor}</span></h2>
                                 <p>Posted: <span className='font-bold'>{detail?.postTime}</span></p>
                                 <Rating
@@ -214,10 +214,10 @@ const MealDetails = () => {
 
                             </div>
                             <div className="divider divider-horizontal"></div>
-                            <div className='w-2/3 ml-10 space-y-5'>
+                            <div className='lg:w-2/3 mt-5 lg:mt-0 lg:ml-10 space-y-5'>
                                 <h2 className="card-title text-3xl font-bold">{detail?.title}</h2>
                                 <p>{detail?.desc}</p>
-                                <p className='font-semibold'> InGredients are -
+                                <p className='font-semibold'> Ingredients are -
                                     <span className='font-normal text-lg'>
                                         {
                                             detail?.ingredients?.map((items, ind) => <li key={ind}>
@@ -232,7 +232,7 @@ const MealDetails = () => {
                                         className="btn btn-primary">Request for Meal</button>
                                 </div>
                                 <div>
-                                    <textarea ref={reviewRef} className="textarea textarea-primary text-white" name="review" id="" cols="70" rows="4" placeholder='Give a Review'></textarea>
+                                    <textarea ref={reviewRef} className="textarea w-full textarea-primary text-white" name="review" id="" cols="" rows="4" placeholder='Give a Review'></textarea>
                                     <button
                                         onClick={() => handleReview(detail)}
                                         className="btn">Give Review {detail?.reviews}</button>
