@@ -63,7 +63,7 @@ const MyProfile = () => {
 
 
     return (
-        <div className='shadow-amber-200 text-white shadow-xl max-w-4xl mx-auto'>
+        <div className='shadow-amber-200 text-white shadow-sm rounded-lg max-w-4xl mx-auto'>
 
             <SectionTitle heading={"My Profile"}></SectionTitle>
             <Helmet>

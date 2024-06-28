@@ -45,7 +45,7 @@ const AllMeals = () => {
                 <title>Cooking God | All Meals</title>
             </Helmet>
             <SectionTitle heading={"All Meals Here"}></SectionTitle>
-            <div className="overflow-x-auto shadow-amber-200 text-white shadow-xl max-w-4xl mx-auto">
+            <div className="overflow-x-auto shadow-amber-200 text-white shadow-sm rounded-lg max-w-4xl mx-auto">
                 <table className="table w-11/12 mx-auto">
                     {/* head */}
                     <thead>

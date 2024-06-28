@@ -70,7 +70,7 @@ const AllReviews = () => {
              <Helmet>
                 <title>Cooking God | All Reviews</title>
             </Helmet>
-            <div className="overflow-x-auto shadow-amber-200 shadow-xl max-w-4xl mx-auto text-white">
+            <div className="overflow-x-auto shadow-amber-200 shadow-sm rounded-lg max-w-4xl mx-auto text-white">
                 <SectionTitle heading={'All Reviews'}></SectionTitle>
                 <table className="table w-11/12 mx-auto">
                     {/* head */}

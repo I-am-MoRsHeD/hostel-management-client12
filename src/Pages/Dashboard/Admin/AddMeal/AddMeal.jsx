@@ -57,13 +57,13 @@ const AddMeal = () => {
 
 
     return (
-        <div className='shadow-amber-200 shadow-xl max-w-4xl mx-auto'>
+        <div className='shadow-amber-200 shadow-sm rounded-lg bg-gray-950 max-w-4xl mx-auto my-10 pt-2'>
             <Helmet>
                 <title>Cooking God | Add Meal</title>
             </Helmet>
             <div>
                 <SectionTitle heading={"Add a Meal"}></SectionTitle>
-                <form className='text-white lg:mx-0 mx-2' onSubmit={handleSubmit(onSubmit)}>
+                <form className='text-white lg:mx-5 mx-2' onSubmit={handleSubmit(onSubmit)}>
                     {/* title */}
                     <div className="form-control w-full my-1">
                         <label className="label">
@@ -180,9 +180,13 @@ const AddMeal = () => {
                                 className="input input-bordered w-full" />
                         </div>
                     </div>
-                    <div className='flex flex-col lg:flex-row gap-6'>
-                        <button onClick={() => setItems('AddMeal')} className="btn btn-warning lg:w-1/2 mt-4">Add Meal</button>
-                        <button onClick={() => setItems('AddUpcomingMeals')} className="btn btn-accent lg:w-1/2">Add to Upcoming Meals</button>
+                    <div className='flex flex-col lg:flex-row gap-5 py-5'>
+                        <div className='w-full lg:w-1/2'>
+                            <button onClick={() => setItems('AddMeal')} className="btn btn-warning w-full">Add Meal</button>
+                        </div>
+                        <div className='w-full lg:w-1/2'>
+                            <button onClick={() => setItems('AddUpcomingMeals')} className="btn btn-accent w-full ">Add to Upcoming Meals</button>
+                        </div>
                     </div>
 
                 </form>

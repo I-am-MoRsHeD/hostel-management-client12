@@ -41,7 +41,7 @@ const UpcomingMeals = () => {
                 <title>Cooking God | Upcoming Meals</title>
             </Helmet>
             <SectionTitle heading={"Upcoming Meals"}></SectionTitle>
-            <div className="overflow-x-auto text-white shadow-amber-200 shadow-xl max-w-4xl mx-auto">
+            <div className="overflow-x-auto text-white shadow-amber-200 shadow-sm rounded-lg max-w-4xl mx-auto">
                 <table className="table w-11/12 mx-auto">
                     {/* head */}
                     <thead>
